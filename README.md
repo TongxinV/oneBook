@@ -1,2 +1,2 @@
-# Mynote-Embedded-
+# Mynote-Embedded
 Learning 
