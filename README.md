@@ -1,6 +1,6 @@
 # Mynote-Learning of Embedded
 
-目录
+> 目录
 
 * 1.Basic external equipment 
 
