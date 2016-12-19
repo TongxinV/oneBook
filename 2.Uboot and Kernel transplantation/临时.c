@@ -1,5 +1,5 @@
 
-```c
+
 
 #include <config.h> 	//config.h是在include目录下的，这个文件不是源码中本身存在的文件，而
                         //是配置过程中自动生成的文件。（详见mkconfig脚本）。这个文件的内容其
@@ -18,7 +18,7 @@
 #endif
 #endif
 
-/ * Jump vector table as in table 3.1 in [1] * /
+/* Jump vector table as in table 3.1 in [1] */
 
 #if defined(CONFIG_EVT1) && !defined(CONFIG_FUSED)
 	.word 0x2000
@@ -39,7 +39,7 @@ _start: b	reset
 /*
  * the actual reset code
  */
-```
-`[llll](www.baidu.com)`
+ 
+
 
 
