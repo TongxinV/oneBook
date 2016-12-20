@@ -23,32 +23,29 @@
         |       |           mem_ctrl_asm_init
         |       |       初始化串口，并打印‘OK’
         |       |       pop {pc}
+        |       |
         |       ├── 设置栈. 为了将来重定位之后能在内存中使用栈；判断当前代码是在SRAM中还是DDR中执行以决定是否进行重定位movi_bl2_copy
         |       ├── after_copy：构建虚拟地址映射表，并设置基地址，同时开启MMU
         |       ├── 设置栈. 这次设置栈还是在内存中，但是本次设置栈的目的是将栈放在比较合适的位置
         |       └── ldr pc, __start_armboot
         | 
-	start_armboot函数
-
-	init_sequence
-		cpu_init	空的
-		board_init	网卡、机器码、内存传参地址
-			dm9000_pre_init			网卡
-	
-			        gd->bd->bi_arch_number	机器码
-			        gd->bd->bi_boot_params	内存传参地址
-		            interrupt_init	定时器
-		            env_init
-		            init_baudrate	gd数据结构中波特率
-		            serial_init		空的
-		            console_init_f	空的
-		            display_banner	打印启动信息
-		            print_cpuinfo	打印CPU时钟设置信息
-		            checkboard		检验开发板名字
-		            dram_init		gd数据结构中DDR信息
-		            display_dram_config	打印DDR配置信息表
-
-	mem_malloc_init		初始化uboot自己维护的堆管理器的内存
+	    └──start_armboot函数
+            ├── init_sequence
+            |       cpu_init	空的
+	        |       board_init	网卡、机器码、内存传参地址
+		    |       dm9000_pre_init			网卡
+			|       gd->bd->bi_arch_number	机器码
+			|       gd->bd->bi_boot_params	内存传参地址
+		    |       interrupt_init	定时器
+		    |       env_init
+		    |       init_baudrate	gd数据结构中波特率
+		    |       serial_init		空的
+		    |       console_init_f	空的
+		    |       display_banner	打印启动信息
+		    |       print_cpuinfo	打印CPU时钟设置信息
+		    |       checkboard		检验开发板名字
+		    |       dram_init		gd数据结构中DDR信息
+		    |       display_dram_config	打印DDR配置信息表
 	mmc_initialize		inand/SD卡的SoC控制器和卡的初始化
 	env_relocate			环境变量重定位
 	gd->bd->bi_ip_addr	gd数据结构赋值
