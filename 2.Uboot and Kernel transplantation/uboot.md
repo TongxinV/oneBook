@@ -9,7 +9,7 @@
 
 ###uboot配置和编译过程详解<先看地图 再看源代码>
 imp.file:``mkconfig脚本`` ``Makefile文件``
-结构：
+结构
 
     <主Makefile分析>
         ├── 1. U_BOOT_VERSION
