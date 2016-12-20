@@ -13,7 +13,16 @@
         │       ├── Read booting information    加载启动信息，主要完成了识别并暂存启动介质类型
         │       ├── 设置栈.为了在内部96KB的iRAM中使用栈；并调用lowlevel_init
         │       ├── lowlevel_init
-        |              ├── push {lr}
+        |           ├── push {lr}
+        |           ├── check reset statue
+        |           ├── IO Retension release
+        |           ├── Disable Watchdog
+        |           ├── 供电锁存
+                    ├── 判断当前代码是在SRAM中还是DDR中执行 以决定是否跳过下面的时钟和DDR初始化
+                    |       system_clock_init
+                    |       mem_ctrl_asm_init
+                    ├── 初始化串口，并打印‘OK’
+                    ├── pop {pc}
         |                  check reset statue
         |              └── c.php
         |       └── c.php
