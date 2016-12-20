@@ -66,5 +66,9 @@
                     ......
                     └── do_boot_linux -> theKernel(0,machid,bd->bi_boot_params)
 		
-		    
+###详细代码分析
+略（日后补充）
+
+###uboot如何启动内核
+1.
  
