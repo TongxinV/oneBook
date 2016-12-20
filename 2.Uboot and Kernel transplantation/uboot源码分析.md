@@ -1,6 +1,6 @@
 #题目待定
 
-
+##uboot 源码分析
 考虑这样的目录结构：
 
     uboot
@@ -116,6 +116,4 @@ init_sequence
 do_bootm
 do_boot_linux -> theKernel(0,machid,bd->bi_boot_params)
 
-
-
-
+##uboot如何启动内核
