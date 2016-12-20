@@ -61,46 +61,11 @@
             ├── eth_initialize		空的
             ├── x210_preboot_init	LCD初始化和显示logo
             ├── check_menu_update_from_sd	检查自动更新
-            ├── main_loop			主循环
-            ├── 
-            ├── 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-    do_bootm
-    do_boot_linux -> theKernel(0,machid,bd->bi_boot_params)
-
-        │   │   │   │   ├── lowlevel_init
-        │   │   ├── b.css
-        │   │   ├── b.css
-        │   │   ├── b.css
-        │   │   ├── b.css
-        │   │   └── a.php
-        │   │   └── a.php
-        │   │   └── a.php
-        │   ├── b
-        │   │   ├── b.css
-        │   │   ├── b.js
-        │   │   └── b.php
-        │   └── c
-        │       ├── c.css
-        │       ├── c.js
-        │       └── c.php
-        ├── bootstrap.css
-        ├── bootstrap.js
-        ├── index.php
-        └── jquery.js
-
+            └── main_loop			主循环
+                ├── do_bootm
+                    ......
+                    └──  do_boot_linux -> theKernel(0,machid,bd->bi_boot_params) 
+                    
 如果我们可以使用工具扫描整个project目
 
 考虑这样的目录结构：
