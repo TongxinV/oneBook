@@ -1,0 +1,65 @@
+##题目待定
+###uboot源码分析
+结构：
+
+    project
+        ├── start.S
+        │   ├── 1.包含头文件
+        │   ├── 2.定义4个4字节变量填充占位
+        │   ├── 3.构建异常向量表，程序跳转到reset符号处
+        │   ├── 4.reset
+        │   │   ├── msr cpsr_c, #0xd3           将CPU设置为禁止 FIQ\IRQ.ARM状态.SVC模式
+        │   │   ├── cpu_init_crit               CPU初始化，完成L2Cache.L1Cache.MMU设置
+        │   │   ├── Read booting information    加载启动信息，主要完成了识别并暂存启动介质类型
+        │   │   ├── 设置栈.为了在内部96KB的iRAM中使用栈；并调用lowlevel_init
+        │   │   │   ├── lowlevel_init
+        │   │   │   │   ├── push {lr}
+        │   │   │   │   ├── check reset statue
+        │   │   │   │   ├── IO Retension release
+        │   │   │   │   ├── Disable Watchdog
+        │   │   │   │   ├── system_clock_init
+        │   │   │   │   ├── lowlevel_init
+        │   │   ├── b.css
+        │   │   ├── b.css
+        │   │   ├── b.css
+        │   │   ├── b.css
+        │   │   └── a.php
+        │   │   └── a.php
+        │   │   └── a.php
+        │   ├── b
+        │   │   ├── b.css
+        │   │   ├── b.js
+        │   │   └── b.php
+        │   └── c
+        │       ├── c.css
+        │       ├── c.js
+        │       └── c.php
+        ├── bootstrap.css
+        ├── bootstrap.js
+        ├── index.php
+        └── jquery.js
+
+如果我们可以使用工具扫描整个project目
+
+考虑这样的目录结构：
+
+    project
+        ├── widget
+        │   ├── a
+        │   │   ├── a.css
+        │   │   ├── a.js
+        │   │   └── a.php
+        │   ├── b
+        │   │   ├── b.css
+        │   │   ├── b.js
+        │   │   └── b.php
+        │   └── c
+        │       ├── c.css
+        │       ├── c.js
+        │       └── c.php
+        ├── bootstrap.css
+        ├── bootstrap.js
+        ├── index.php
+        └── jquery.js
+
+如果我们可以使用工具扫描整个project目
