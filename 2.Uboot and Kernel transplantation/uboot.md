@@ -64,7 +64,8 @@
             └── main_loop			主循环
                 ├── do_bootm
                     ......
-                    └──  do_boot_linux -> theKernel(0,machid,bd->bi_boot_params) 
+		    └──  do_boot_linux -> theKernel(0,machid,bd->bi_boot_params)
+		    
                     
 如果我们可以使用工具扫描整个project目
 
