@@ -1,4 +1,34 @@
-##题目待定
+`[TOC]`
+
+##UBOOT
+
+获取uboot源码包，解压，配置``make xxx_config`` `` 交叉编译工具事先要装好并检查Makefile的交叉编译工具的名称是否正确``make 编译得到uboot.bin
+
+###uboot根目录下的各个文件的含义
+......
+
+###uboot配置和编译过程详解<先看地图 再看源代码>
+imp.file:``mkconfig脚本`` ``Makefile文件``
+结构：
+
+    <主Makefile分析>
+        ├── 1. U_BOOT_VERSION
+        ├── 2. HOSTARCH和HOSTOS  主机架构（i386）和操作系统（linux）  得出来干嘛用？
+        ├── 3. 静默编译
+        ├── 4. 指定文件夹编译 BUILD_DIR = ...
+        ├── 5. export OBJTREE SRCTREE TOPDIR MKCONFIG := $(SRCTREE)/mkconfig
+    ├── 6. include $(obj)/config.mk  {make xxx_config配置时才会生成的文件}
+        │      export  ARCH CPU BOARD VENDOR SOC
+        ├── 7. ARCH = ... CROSS_COMPILE = /usr/local/arm/arm-2009q3/bin/arm-none-linux-gnueabi-
+        ├── 8. include $(TOPDIR)/config.mk    
+    │        (1)编译工具定义 CC = $(CROSS_COMPILE)gcc  
+        │        (2)包含开发板配置文件
+        │        (3)指定连接脚本LDSCRIPT
+        │        (4)uboot 链接地址TEXT_BASE
+        │        (5)自动推导规则
+        └── 9. all:
+                ......
+ 
 ###uboot源码分析
 flags:JiuDing移植的uboot
 
@@ -31,27 +61,27 @@ flags:JiuDing移植的uboot
         │       ├── 设置栈. 这次设置栈还是在内存中，但是本次设置栈的目的是将栈放在比较合适的位置
         │       └── ldr pc, __start_armboot
         │ 
-	    └──start_armboot函数
+        └──start_armboot函数
             ├── init_sequence
             │       cpu_init	空的
-	        │       board_init	网卡、机器码、内存传参地址
-		    │       dm9000_pre_init			网卡
-            │       gd-           >bd->bi_arch_number	机器码
-			│       gd->bd->bi_boot_params	内存传参地址
-		    │       interrupt_init	定时器
-		    │       env_init
-		    │       init_baudrate	gd数据结构中波特率
-		    │       serial_init		空的
-		    │       console_init_f	空的
-		    │       display_banner	打印启动信息
-		    │       print_cpuinfo	打印CPU时钟设置信息
-		    │       checkboard		检验开发板名字
-		    │       dram_init		gd数据结构中DDR信息
-		    │       display_dram_config	打印DDR配置信息表
+            │       board_init	网卡、机器码、内存传参地址
+            │       dm9000_pre_init			网卡
+            │       gd->bd->bi_arch_number	机器码
+            │       gd->bd->bi_boot_params	内存传参地址
+            │       interrupt_init	定时器
+            │       env_init
+            │       init_baudrate	gd数据结构中波特率
+            │       serial_init		空的
+            │       console_init_f	空的
+            │       display_banner	打印启动信息
+            │       print_cpuinfo	打印CPU时钟设置信息
+            │       checkboard		检验开发板名字
+            │       dram_init		gd数据结构中DDR信息
+            │       display_dram_config	打印DDR配置信息表
             │
             ├── mem_malloc_init		初始化uboot自己维护的堆管理器的内存
-		    ├── mmc_initialize		inand/SD卡的SoC控制器和卡的初始化
-	        ├── env_relocate			环境变量重定位
+            ├── mmc_initialize		inand/SD卡的SoC控制器和卡的初始化
+            ├── env_relocate		环境变量重定位
             ├── gd->bd->bi_ip_addr	gd数据结构赋值
             ├── gd->bd->bi_enetaddr	gd数据结构赋值
             ├── devices_init			空的
@@ -68,18 +98,18 @@ flags:JiuDing移植的uboot
                     ......
                     └── do_boot_linux -> theKernel(0,machid,bd->bi_boot_params)
 		
-###详细代码分析
+**详细代码分析**
 略（日后补充）
+
 
 ###uboot如何启动内核
 事先设置好`bootcmd`和`bootargs`
 > 例: bootcmd 'movi read kernel 30008000; bootm 30008000'
-  例：bootargs = 'xxx'
+ 例：bootargs = 'xxx'
 
 1. 将内核镜像从启动介质加载到DDR中，执行`do_bootm`函数
 2. 启动内核并同时传递参数给内核
  
-
 
 
 
