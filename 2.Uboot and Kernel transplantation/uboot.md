@@ -73,9 +73,17 @@ flags:JiuDing移植的uboot
 
 ###uboot如何启动内核
 事先设置好`bootcmd`和`bootargs`
-> 例: bootcmd: movi read kernel 30008000;
+> 例: bootcmd 'movi read kernel 30008000; bootm 30008000'
+  例：bootargs = 'xxx'
 
-
-
-
+1.将内核镜像从启动介质加载到DDR中，执行`do_bootm`函数
+2.启动内核并同时传递参数给内核
  
+
+
+
+
+
+
+
+
