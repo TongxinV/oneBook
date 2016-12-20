@@ -27,7 +27,14 @@
         |       ├── after_copy：构建虚拟地址映射表，并设置基地址，同时开启MMU
         |       ├── 设置栈. 这次设置栈还是在内存中，但是本次设置栈的目的是将栈放在比较合适的位置
         |       └── ldr pc, __start_armboot
-        |    
+        | 
+	start_armboot函数
+
+	init_sequence
+		cpu_init	空的
+		board_init	网卡、机器码、内存传参地址
+			dm9000_pre_init			网卡
+	
 			        gd->bd->bi_arch_number	机器码
 			        gd->bd->bi_boot_params	内存传参地址
 		            interrupt_init	定时器
