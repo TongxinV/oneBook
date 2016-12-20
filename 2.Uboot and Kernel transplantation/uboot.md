@@ -66,28 +66,4 @@
                     ......
 		    └──  do_boot_linux -> theKernel(0,machid,bd->bi_boot_params)
 		    
-                    
-如果我们可以使用工具扫描整个project目
-
-考虑这样的目录结构：
-
-    project
-        ├── widget
-        │   ├── a
-        │   │   ├── a.css
-        │   │   ├── a.js
-        │   │   └── a.php
-        │   ├── b
-        │   │   ├── b.css
-        │   │   ├── b.js
-        │   │   └── b.php
-        │   └── c
-        │       ├── c.css
-        │       ├── c.js
-        │       └── c.php
-        ├── bootstrap.css
-        ├── bootstrap.js
-        ├── index.php
-        └── jquery.js
-
-如果我们可以使用工具扫描整个project目
+ 
