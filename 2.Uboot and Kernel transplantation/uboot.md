@@ -24,14 +24,10 @@
         |       |       初始化串口，并打印‘OK’
         |       |       pop {pc}
         |       ├── 设置栈. 为了将来重定位之后能在内存中使用栈；判断当前代码是在SRAM中还是DDR中执行以决定是否进行重定位movi_bl2_copy
-        |       └── pop {pc}
+        |       ├── after_copy：构建虚拟地址映射表，并设置基地址，同时开启MMU
+        |       ├── 设置栈. 这次设置栈还是在内存中，但是本次设置栈的目的是将栈放在比较合适的位置
+        |       └── ldr pc, __start_armboot
         |    
-        |       └── c.php
-        │           │   ├── IO Retension release
-        │   │   │   │   ├── Disable Watchdog
-        │   │   │   │   ├── 供电锁存
-        │   │   │   │   ├── 判断当前代码是在SRAM中还是DDR中执行 以决定是否跳过下面的时钟和DDR初始化
-                                fff
         │   │   │   │   ├── lowlevel_init
         │   │   ├── b.css
         │   │   ├── b.css
