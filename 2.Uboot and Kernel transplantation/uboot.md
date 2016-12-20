@@ -17,7 +17,7 @@
         │       │       check reset statue
         │       │       IO Retension release
         │       │       Disable Watchdog
-        │       │      供电锁存
+        │       │       供电锁存
         │       │       判断当前代码是在SRAM中还是DDR中执行 以决定是否跳过下面的时钟和DDR初始化
         │       │           system_clock_init
         │       │           mem_ctrl_asm_init
