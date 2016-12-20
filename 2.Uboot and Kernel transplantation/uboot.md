@@ -1,5 +1,7 @@
 ##题目待定
 ###uboot源码分析
+flags:JiuDing移植的uboot
+
 结构：
 
     project
@@ -70,5 +72,10 @@
 略（日后补充）
 
 ###uboot如何启动内核
-1.
+事先设置好`bootcmd`和`bootargs`
+> 例: bootcmd: movi read kernel 30008000;
+
+
+
+
  
