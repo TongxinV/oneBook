@@ -46,20 +46,37 @@
 		    |       checkboard		检验开发板名字
 		    |       dram_init		gd数据结构中DDR信息
 		    |       display_dram_config	打印DDR配置信息表
-	mmc_initialize		inand/SD卡的SoC控制器和卡的初始化
-	env_relocate			环境变量重定位
-	gd->bd->bi_ip_addr	gd数据结构赋值
-	gd->bd->bi_enetaddr	gd数据结构赋值
-	devices_init			空的
-	jumptable_init		不用关注的
-	console_init_r		真正的控制台初始化
-	enable_interrupts	空的
-	loadaddr、bootfile 	环境变量读出初始化全局变量
-	board_late_init		空的
-	eth_initialize		空的
-	x210_preboot_init	LCD初始化和显示logo
-	check_menu_update_from_sd	检查自动更新
-	main_loop			主循环
+            |
+            ├── mem_malloc_init		初始化uboot自己维护的堆管理器的内存
+		    ├── mmc_initialize		inand/SD卡的SoC控制器和卡的初始化
+	        ├── env_relocate			环境变量重定位
+            ├── gd->bd->bi_ip_addr	gd数据结构赋值
+            ├── gd->bd->bi_enetaddr	gd数据结构赋值
+            ├── devices_init			空的
+            ├── jumptable_init		不用关注的
+            ├── console_init_r		真正的控制台初始化
+            ├── enable_interrupts	空的
+            ├── loadaddr、bootfile 	环境变量读出初始化全局变量
+            ├── board_late_init		空的
+            ├── eth_initialize		空的
+            ├── x210_preboot_init	LCD初始化和显示logo
+            ├── check_menu_update_from_sd	检查自动更新
+            ├── main_loop			主循环
+            ├── 
+            ├── 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
     do_bootm
     do_boot_linux -> theKernel(0,machid,bd->bi_boot_params)
 
