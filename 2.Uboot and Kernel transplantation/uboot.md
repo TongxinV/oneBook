@@ -8,13 +8,15 @@
         │   ├── 2.定义4个4字节变量填充占位
         │   ├── 3.构建异常向量表，程序跳转到reset符号处
         │   ├── 4.reset
-        │           ├── msr cpsr_c, #0xd3           将CPU设置为禁止 FIQ\IRQ.ARM状态.SVC模式
-        │           ├── cpu_init_crit               CPU初始化，完成L2Cache.L1Cache.MMU设置
-        │           ├── Read booting information    加载启动信息，主要完成了识别并暂存启动介质类型
-        │           ├── 设置栈.为了在内部96KB的iRAM中使用栈；并调用lowlevel_init
-        │           ├── lowlevel_init
-        |                  push {lr}
+        │       ├── msr cpsr_c, #0xd3           将CPU设置为禁止 FIQ\IRQ.ARM状态.SVC模式
+        │       ├── cpu_init_crit               CPU初始化，完成L2Cache.L1Cache.MMU设置
+        │       ├── Read booting information    加载启动信息，主要完成了识别并暂存启动介质类型
+        │       ├── 设置栈.为了在内部96KB的iRAM中使用栈；并调用lowlevel_init
+        │       ├── lowlevel_init
+        |              ├── push {lr}
         |                  check reset statue
+        |              └── c.php
+        |       └── c.php
         │           │   ├── IO Retension release
         │   │   │   │   ├── Disable Watchdog
         │   │   │   │   ├── 供电锁存
