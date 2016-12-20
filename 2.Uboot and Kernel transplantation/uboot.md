@@ -28,6 +28,37 @@
         |       ├── 设置栈. 这次设置栈还是在内存中，但是本次设置栈的目的是将栈放在比较合适的位置
         |       └── ldr pc, __start_armboot
         |    
+			        gd->bd->bi_arch_number	机器码
+			        gd->bd->bi_boot_params	内存传参地址
+		            interrupt_init	定时器
+		            env_init
+		            init_baudrate	gd数据结构中波特率
+		            serial_init		空的
+		            console_init_f	空的
+		            display_banner	打印启动信息
+		            print_cpuinfo	打印CPU时钟设置信息
+		            checkboard		检验开发板名字
+		            dram_init		gd数据结构中DDR信息
+		            display_dram_config	打印DDR配置信息表
+
+	mem_malloc_init		初始化uboot自己维护的堆管理器的内存
+	mmc_initialize		inand/SD卡的SoC控制器和卡的初始化
+	env_relocate			环境变量重定位
+	gd->bd->bi_ip_addr	gd数据结构赋值
+	gd->bd->bi_enetaddr	gd数据结构赋值
+	devices_init			空的
+	jumptable_init		不用关注的
+	console_init_r		真正的控制台初始化
+	enable_interrupts	空的
+	loadaddr、bootfile 	环境变量读出初始化全局变量
+	board_late_init		空的
+	eth_initialize		空的
+	x210_preboot_init	LCD初始化和显示logo
+	check_menu_update_from_sd	检查自动更新
+	main_loop			主循环
+    do_bootm
+    do_boot_linux -> theKernel(0,machid,bd->bi_boot_params)
+
         │   │   │   │   ├── lowlevel_init
         │   │   ├── b.css
         │   │   ├── b.css
