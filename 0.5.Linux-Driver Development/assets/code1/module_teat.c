@@ -23,16 +23,19 @@ char kbuf[100];			// 内核空间的buf
 
 static int test_chrdev_open(struct inode *inode, struct file *file)
 {
-	// 这个函数中真正应该放置的是打开这个设备的硬件操作代码部分，比如初始化什么的
-//这里我们暂时不写，明白就好
+	// 这个函数中真正应该放置的是打开这个设备时的硬件操作代码部分，比如初始化什么的
 	printk(KERN_INFO "test_chrdev_open\n");
+
+	rGPJ0CON = 0x11111111;
+	rGPJ0DAT = ((0<<3) | (0<<4) | (0<<5));		// 亮
 	return 0;
 }
 
 static int test_chrdev_release(struct inode *inode, struct file *file)
 {
 	printk(KERN_INFO "test_chrdev_release\n");
-	return 0;
+	rGPJ0DAT = ((1<<3) | (1<<4) | (1<<5));     //灭	
+    return 0;
 }
 
 ssize_t test_chrdev_read(struct file *file, char __user *ubuf, size_t count, loff_t *ppos)
