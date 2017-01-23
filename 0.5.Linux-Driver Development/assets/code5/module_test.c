@@ -39,9 +39,8 @@ char kbuf[100];			// 内核空间的buf
 
 static int test_chrdev_open(struct inode *inode, struct file *file)
 {
-	// 这个函数中真正应该放置的是打开这个设备的硬件操作代码部分
-	// 但是现在暂时我们写不了这么多，所以用一个printk打印个信息来做代表。
-	printk(KERN_INFO "test_chrdev_open\n");
+	// 这个函数中真正应该放置的是打开这个设备的硬件操作代码部分，比如初始化
+    printk(KERN_INFO "test_chrdev_open\n");
 	
 	rGPJ0CON = 0x11111111;
 	rGPJ0DAT = ((0<<3) | (0<<4) | (0<<5));		// 亮
@@ -53,8 +52,8 @@ static int test_chrdev_release(struct inode *inode, struct file *file)
 {
 	printk(KERN_INFO "test_chrdev_release\n");
 	
-	rGPJ0DAT = ((1<<3) | (1<<4) | (1<<5));
-	
+    rGPJ0DAT = ((1<<3) | (1<<4) | (1<<5));
+
 	return 0;
 }
 
@@ -65,20 +64,17 @@ ssize_t test_chrdev_read(struct file *file, char __user *ubuf, size_t count, lof
 	printk(KERN_INFO "test_chrdev_read\n");
 	
 	ret = copy_to_user(ubuf, kbuf, count);
-	if (ret)
-	{
+	if (ret){
 		printk(KERN_ERR "copy_to_user fail\n");
 		return -EINVAL;
 	}
 	printk(KERN_INFO "copy_to_user success..\n");
 	
-	
 	return 0;
 }
 
 // 写函数的本质就是将应用层传递过来的数据先复制到内核中，然后将之以正确的方式写入硬件完成操作。
-static ssize_t test_chrdev_write(struct file *file, const char __user *ubuf,
-	size_t count, loff_t *ppos)
+static ssize_t test_chrdev_write(struct file *file, const char __user *ubuf,size_t count, loff_t *ppos)
 {
 	int ret = -1;
 	
@@ -88,23 +84,18 @@ static ssize_t test_chrdev_write(struct file *file, const char __user *ubuf,
 	//memcpy(kbuf, ubuf);		// 不行，因为2个不在一个地址空间中
 	memset(kbuf, 0, sizeof(kbuf));
 	ret = copy_from_user(kbuf, ubuf, count);
-	if (ret)
-	{
+	if (ret){
 		printk(KERN_ERR "copy_from_user fail\n");
 		return -EINVAL;
 	}
 	printk(KERN_INFO "copy_from_user success..\n");
 	
-	if (kbuf[0] == '1')
-	{
+	if (kbuf[0] == '1'){
 		rGPJ0DAT = ((0<<3) | (0<<4) | (0<<5));
 	}
-	else if (kbuf[0] == '0')
-	{
+    else if (kbuf[0] == '0'){
 		rGPJ0DAT = ((1<<3) | (1<<4) | (1<<5));
 	}
-	
-	
 /*
 	// 真正的驱动中，数据从应用层复制到驱动中后，我们就要根据这个数据
 	// 去写硬件完成硬件的操作。所以这下面就应该是操作硬件的代码
@@ -117,9 +108,6 @@ static ssize_t test_chrdev_write(struct file *file, const char __user *ubuf,
 		rGPJ0DAT = ((1<<3) | (1<<4) | (1<<5));
 	}
 */
-
-	
-	
 	return 0;
 }
 
@@ -144,17 +132,14 @@ static int __init chrdev_init(void)
 
 	// 使用新的cdev接口来注册字符设备驱动
 	// 新的接口注册字符设备驱动需要2步
-	
 	// 第1步：分配主次设备号
 	retval = alloc_chrdev_region(&mydev, 12, MYCNT, MYNAME);
-	if (retval < 0) 
-	{
+	if (retval < 0) {
 		printk(KERN_ERR "Unable to alloc minors for %s\n", MYNAME);
 		goto flag1;
 	}
 	printk(KERN_INFO "alloc_chrdev_region success\n");
 	printk(KERN_INFO "major = %d, minor = %d.\n", MAJOR(mydev), MINOR(mydev));
-	
 	
 	// 第2步：注册字符设备驱动
 	pcdev = cdev_alloc();			// 给pcdev分配内存，指针实例化
@@ -227,13 +212,10 @@ static void __exit chrdev_exit(void)
 	iounmap(pGPJ0DAT);
 	release_mem_region(GPJ0CON_PA, 4);
 	release_mem_region(GPJ0DAT_PA, 4);
-
 /*	
 	// 在module_exit宏调用的函数中去注销字符设备驱动
 	unregister_chrdev(mymajor, MYNAME);
 */	
-
-
 	device_destroy(test_class, mydev);
 	class_destroy(test_class);
 
