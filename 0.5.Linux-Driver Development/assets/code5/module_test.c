@@ -31,7 +31,7 @@ unsigned int *pGPJ0DAT;
 //int mymajor;
 static dev_t mydev;
 //static struct cdev test_cdev;
-static struct cdev *pcdev;
+static struct cdev  *pcdev;
 static struct class *test_class;
 
 char kbuf[100];			// 内核空间的buf
@@ -215,7 +215,7 @@ flag1:
 //	return 0;
 }
 
-// 模块下载函数
+// 模块卸载函数
 static void __exit chrdev_exit(void)
 {
 	printk(KERN_INFO "chrdev_exit helloworld exit\n");
