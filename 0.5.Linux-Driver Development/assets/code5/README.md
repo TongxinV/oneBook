@@ -31,7 +31,7 @@ static int __init chrdev_init(void)
 	// 最后1个参数字符串，就是我们将来要在/dev目录下创建的设备文件的名字
 	// 所以我们这里要的文件名是/dev/test1111，在/sys/class/aston_class下也有
 	device_create(test_class, NULL, dev_id, NULL, "test1111");
-......
+    ......
 }
 static void __exit chrdev_exit(void)
 {
@@ -41,5 +41,6 @@ static void __exit chrdev_exit(void)
 	unregister_chrdev_region(dev_id, TEST_COUNT);	//第二步注销申请的主次设备号
 }
 
+...
 
-```  
+```
