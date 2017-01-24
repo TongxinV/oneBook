@@ -14,6 +14,7 @@
 
 > 博客
 
+* [Linux内核静态映射表建立过程分析](https://github.com/TongxinV/oneBook/issues/5)
 
 > 备忘录
 
