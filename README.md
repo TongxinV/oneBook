@@ -1,6 +1,6 @@
 # oneBook
 
-> 目录
+> 随笔
 
 * 1.Basic external equipment 
 
@@ -11,6 +11,9 @@
 * 4.Language C and C Plus
 
 * 5.Linux-Driver Development
+
+> 博客
+
 
 > 备忘录
 
