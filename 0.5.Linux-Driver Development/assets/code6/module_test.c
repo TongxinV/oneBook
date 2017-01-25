@@ -63,7 +63,7 @@ static int test_chrdev_open(struct inode *inode, struct file *file)
 	printk(KERN_INFO "test_chrdev_open\n");
 	//rGPJ0CON = 0x11111111;
 	//rGPJ0DAT = ((0<<3) | (0<<4) | (0<<5));		// 亮
-    writel(0x11111111, baseaddr + S5P_GPJ0CON);
+        writel(0x11111111, baseaddr + S5P_GPJ0CON);
 	writel(((0<<3) | (0<<4) | (0<<5)), baseaddr + S5P_GPJ0DAT);
     
 	return 0;
@@ -163,7 +163,7 @@ static int __init chrdev_init(void)
 	}
 	printk(KERN_INFO "cdev_add success...\n");
 	
-    //添加设备类操作
+        //添加设备类操作
 	test_class = class_create(THIS_MODULE, "aston_class");
 	if (IS_ERR(test_class))
 		goto err_class;
@@ -184,8 +184,8 @@ static int __init chrdev_init(void)
 	*pGPJ0DAT = ((0<<3) | (0<<4) | (0<<5));		// 亮
 #endif 
 	//测试1：用静态映射的虚拟地址来操作，测试成功
-    //writel(0x11111111, GPJ0CON);
-    //writel(((0<<3) | (0<<4) | (0<<5)), GPJ0DAT);
+        //writel(0x11111111, GPJ0CON);
+        //writel(((0<<3) | (0<<4) | (0<<5)), GPJ0DAT);
 	
 	//测试2：用1次ioremap映射多个寄存器得到虚拟地址，测试成功
 	if (!request_mem_region(GPJ0CON_PA, 8, "GPJ0BASE"))
@@ -217,13 +217,13 @@ static void __exit chrdev_exit(void)
 	//第1步解除映射
 	iounmap(pGPJ0CON);
 	iounmap(pGPJ0DAT);
-    //第2步释放资源
+        //第2步释放资源
 	release_mem_region(GPJ0CON_PA, 4);
 	release_mem_region(GPJ0DAT_PA, 4);
 	
-    //第1步删除用户空间下的设备
+        //第1步删除用户空间下的设备
 	device_destroy(test_class, dev_id);
-    //第2步删除用户空间下的类
+        //第2步删除用户空间下的类
 	class_destroy(test_class);
 	
 	//第1步真正注销字符设备驱动
@@ -239,7 +239,7 @@ module_exit(chrdev_exit);
 // MODULE_xxx这种宏作用是用来添加模块描述信息
 MODULE_LICENSE("GPL");				// 描述模块的许可证
 MODULE_AUTHOR("aston");				// 描述模块的作者
-MODULE_DESCRIPTION("module test");	// 描述模块的介绍信息
+MODULE_DESCRIPTION("module test");	        // 描述模块的介绍信息
 MODULE_ALIAS("alias xxx");			// 描述模块的别名信息
 
 
