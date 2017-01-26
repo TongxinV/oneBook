@@ -24,4 +24,4 @@
 
 - [x] 第五部分某一位置需要添加 `blog`.`linux内核静态映射表建立过程`链接
 
-- [ ] 完成文章《Kconfig Makefile .config三者之间的关系（在内核中添加或去除某个驱动）》
+- [ ] 完成文章`《Kconfig Makefile .config三者之间的关系（在内核中添加或去除某个驱动）》`
