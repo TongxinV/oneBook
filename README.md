@@ -19,6 +19,7 @@
 * [`Linux内核静态映射表建立过程分析`](https://github.com/TongxinV/oneBook/issues/5)
 * [`动态映射之结构体方式操作寄存器`](https://github.com/TongxinV/oneBook/issues/6)
 * [`内核提供读写寄存器接口实现可移植性`](https://github.com/TongxinV/oneBook/issues/8)
+* [`linux内核段属性机制(以subsys_initcall和module_init为例)`](https://github.com/TongxinV/oneBook/issues/9)
 
 > 备忘录
 
