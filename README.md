@@ -2,6 +2,11 @@
 
 > 随笔
 
+****
+
+                        在朱有鹏老师的指导下结合自身理解对知识的归纳，技术需要一点一点的积累
+
+****
 * 1.Basic external equipment 
 
 * 2.BootLoader and Kernel
