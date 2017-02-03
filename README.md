@@ -36,6 +36,7 @@
 
 - [ ] `出个专题--写一下接触过的驱动框架的源码分析（文章写了，但是可以blog也写简略写一下，方便自己查阅也可能帮助到其他人）`
 
+- [ ] `写文章的时候有时候需要总结有时候不需要总结，因为有时候需要对细节掌握要求高一点`
 
 
 [5-0]:https://github.com/TongxinV/oneBook/blob/master/0.5.Linux-Driver%20Development/0.0.%E5%AD%97%E7%AC%A6%E8%AE%BE%E5%A4%87%E5%9F%BA%E7%A1%80.md#随笔--linux字符设备驱动开发基础
