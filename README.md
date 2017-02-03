@@ -17,7 +17,9 @@
 * 5.Linux-Driver Development
     * [`随笔--Linux字符设备驱动开发基础`][5-0]
     * [`随笔--Linux驱动框架入门之LED`][5-1]
-    * [` 随笔--linux内核的gpiolib学习`][5-2]
+    * [`随笔--Linux内核的gpiolib学习`][5-2]
+    * [`随笔--Linux设备驱动模型`][5-3]
+    
     
 > 博客
 
@@ -42,6 +44,6 @@
 [5-0]:https://github.com/TongxinV/oneBook/blob/master/0.5.Linux-Driver%20Development/0.0.%E5%AD%97%E7%AC%A6%E8%AE%BE%E5%A4%87%E5%9F%BA%E7%A1%80.md#随笔--linux字符设备驱动开发基础
 [5-1]:https://github.com/TongxinV/oneBook/blob/master/0.5.Linux-Driver%20Development/5.1.%E9%A9%B1%E5%8A%A8%E6%A1%86%E6%9E%B6%E5%85%A5%E9%97%A8.md#随笔--linux驱动框架入门之led
 [5-2]:https://github.com/TongxinV/oneBook/blob/master/0.5.Linux-Driver%20Development/5.2.%E5%86%85%E6%A0%B8%E7%9A%84gpiolib.md#随笔--linux内核的gpiolib学习
-
+[5-3]:https://github.com/TongxinV/oneBook/blob/master/0.5.Linux-Driver%20Development/5.3.%E8%AE%BE%E5%A4%87%E9%A9%B1%E5%8A%A8%E6%A8%A1%E5%9E%8B.md#随笔--linux设备驱动模型
 
 
