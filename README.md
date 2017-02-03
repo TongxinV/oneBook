@@ -29,6 +29,7 @@
 * [`内核提供读写寄存器接口实现可移植性`](https://github.com/TongxinV/oneBook/issues/8)
 * [`linux内核段属性机制(以subsys_initcall和module_init为例)`](https://github.com/TongxinV/oneBook/issues/9)
 * [`将写好的驱动添加到内核中`](https://github.com/TongxinV/oneBook/issues/10)
+* [`系统启动时在bus系统中注册platform总线`](https://github.com/TongxinV/oneBook/issues/11)
 
 > 备忘录
 
