@@ -3,7 +3,7 @@
 
 [![](https://img.shields.io/badge/author-TongxinV-green.svg)](https://github.com/TongxinV)
 [![](https://img.shields.io/badge/CSDN-%E5%8D%9A%E5%AE%A2-ff69b4.svg)](http://blog.csdn.net/tongxinv)
-[![](https://img.shields.io/badge/%20liyanbin0027%40163.com-Chat-blue.svg)](https://iyanbin0027@163.com)
+![](https://img.shields.io/badge/%20liyanbin0027%40163.com-Chat-blue.svg)]
 [![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)]()
 
 > 随笔
