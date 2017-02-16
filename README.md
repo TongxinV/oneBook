@@ -28,12 +28,14 @@
     * [`随笔--Linux内核的gpiolib学习`][5-2]
     * [`随笔--Linux设备驱动模型`][5-3]
     * [`随笔--platform平台总线`][5-4]    
-    
-> 博客
-
+ 
+ 
 ```s
                                                                                                    
-```
+``` 
+> 博客
+
+
 * [`__register_chrdev_region分析(简单字符设备驱动在内核的工作原理)`](https://github.com/TongxinV/oneBook/issues/7)
 * [`Linux内核静态映射表建立过程分析`](https://github.com/TongxinV/oneBook/issues/5)
 * [`动态映射之结构体方式操作寄存器`](https://github.com/TongxinV/oneBook/issues/6)
