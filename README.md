@@ -1,6 +1,8 @@
 # oneBook
 
-![](https://img.shields.io/badge/CSDN-%E5%8D%9A%E5%AE%A2-ff69b4.svg)
+
+[![](https://img.shields.io/badge/author-TongxinV-green.svg)](https://github.com/TongxinV)
+[![](https://img.shields.io/badge/CSDN-%E5%8D%9A%E5%AE%A2-ff69b4.svg)](http://blog.csdn.net/tongxinv)
 
 
 > 随笔
