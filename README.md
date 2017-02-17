@@ -13,14 +13,17 @@
                                                                      @;对所学知识的的归纳，技术需要一点一点的积累
 ```      
 
-* 1.Basic external equipment 
+**1.Basic external equipment **
 
-* 2.BootLoader and Kernel
-    * [`随笔--uboot源码分析`]
+
+**2.BootLoader and Kernel**
+
+* [`随笔--uboot源码分析`]
     
-* 3.Programming in the UNIX
+**3.Programming in the UNIX**
 
-* 4.Language C and C Plus
+
+**4.Language C and C Plus**
 
 
 **5.Linux-Driver Development**
