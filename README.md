@@ -4,7 +4,7 @@
 [![](https://img.shields.io/badge/author-TongxinV-green.svg)](https://github.com/TongxinV)
 [![](https://img.shields.io/badge/CSDN-%E5%8D%9A%E5%AE%A2-ff69b4.svg)](http://blog.csdn.net/tongxinv)
 [![GitHub issues](https://img.shields.io/github/issues/TongxinV/oneBook.svg)](https://github.com/TongxinV/oneBook/issues)
-![](https://img.shields.io/badge/%20liyanbin0027%40163.com-Chat-blue.svg):mailbox_with_mail:
+![](https://img.shields.io/badge/%20liyanbin0027%40163.com-Chat-blue.svg):e-mail:
 [![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)]()
 
 > 随笔
