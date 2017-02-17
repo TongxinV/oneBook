@@ -22,12 +22,14 @@
 
 * 4.Language C and C Plus
 
-* 5.Linux-Driver Development
-    * [`随笔--Linux字符设备驱动开发基础`][5-0]
-    * [`随笔--Linux驱动框架入门之LED`][5-1]
-    * [`随笔--Linux内核的gpiolib学习`][5-2]
-    * [`随笔--Linux设备驱动模型`][5-3]
-    * [`随笔--platform平台总线`][5-4]    
+
+**5.Linux-Driver Development**
+
+ * [`随笔--Linux字符设备驱动开发基础`][5-0]
+ * [`随笔--Linux驱动框架入门之LED`][5-1]
+ * [`随笔--Linux内核的gpiolib学习`][5-2]
+ * [`随笔--Linux设备驱动模型`][5-3]
+ * [`随笔--platform平台总线`][5-4]    
  
  
 
