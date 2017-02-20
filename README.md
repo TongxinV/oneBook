@@ -22,8 +22,10 @@
     
 **3.Programming in the UNIX**
 
+* [`man手册+UNIX环境高级编程`]
 
 **4.Language C and C Plus**
+
 
 
 **5.Linux-Driver Development**
@@ -48,6 +50,8 @@
 * [`linux内核段属性机制(以subsys_initcall和module_init为例)`](https://github.com/TongxinV/oneBook/issues/9)
 * [`将写好的驱动添加到内核中`](https://github.com/TongxinV/oneBook/issues/10)
 * [`系统启动时在bus系统中注册platform总线`](https://github.com/TongxinV/oneBook/issues/11)
+* [`正确使用指针(指针作为输出型参数)与结构体指针作为函数参数`](https://github.com/TongxinV/oneBook/issues/13)
+* [`移植库需要注意事项(与移植库生成的文件如何使用)`](https://github.com/TongxinV/oneBook/issues/14)
 
 > 备忘录
 
