@@ -22,7 +22,7 @@
     
 **3.Programming in the UNIX**
 
-* [`man手册+UNIX环境高级编程`][3-0]
+* [`UNIX环境高级编程简单分类`][3-0]
 
 **4.Language C and C Plus**
 
