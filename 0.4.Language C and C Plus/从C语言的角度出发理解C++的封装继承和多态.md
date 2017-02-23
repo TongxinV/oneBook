@@ -37,7 +37,7 @@
 **C version:**
 ```cc
 struct A{
-  (void* open)(void);
+  void (*open)(void);
   ...
 };
 
