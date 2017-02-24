@@ -52,6 +52,7 @@
 * [`系统启动时在bus系统中注册platform总线`](https://github.com/TongxinV/oneBook/issues/11)
 * [`正确使用指针(指针作为输出型参数)与结构体指针作为函数参数`](https://github.com/TongxinV/oneBook/issues/13)
 * [`移植库需要注意事项(与移植库生成的文件如何使用)`](https://github.com/TongxinV/oneBook/issues/14)
+* [`谈论attribute驱动实现方式(及device_create与设备节点的关系)`](https://github.com/TongxinV/oneBook/issues/15)
 
 > 备忘录
 
