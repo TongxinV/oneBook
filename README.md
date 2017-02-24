@@ -53,6 +53,7 @@
 * [`正确使用指针(指针作为输出型参数)与结构体指针作为函数参数`](https://github.com/TongxinV/oneBook/issues/13)
 * [`移植库需要注意事项(与移植库生成的文件如何使用)`](https://github.com/TongxinV/oneBook/issues/14)
 * [`谈论attribute驱动实现方式(及device_create与设备节点的关系)`](https://github.com/TongxinV/oneBook/issues/15)
+* [`从C语言的角度出发理解C++的封装继承和多态`](https://github.com/TongxinV/oneBook/issues/16)
 
 > 备忘录
 
