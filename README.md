@@ -35,7 +35,7 @@
  * [`随笔--Linux内核的gpiolib学习`][5-2]
  * [`随笔--Linux设备驱动模型`][5-3]
  * [`随笔--platform平台总线`][5-4]    
- 
+ * [`随笔--misc类设备驱动`][5-5]
  
 
 > 博客
@@ -76,4 +76,4 @@
 [5-2]:https://github.com/TongxinV/oneBook/blob/master/0.5.Linux-Driver%20Development/5.2.%E5%86%85%E6%A0%B8%E7%9A%84gpiolib.md#随笔--linux内核的gpiolib学习
 [5-3]:https://github.com/TongxinV/oneBook/blob/master/0.5.Linux-Driver%20Development/5.3.%E8%AE%BE%E5%A4%87%E9%A9%B1%E5%8A%A8%E6%A8%A1%E5%9E%8B.md#随笔--linux设备驱动模型
 [5-4]:https://github.com/TongxinV/oneBook/blob/master/0.5.Linux-Driver%20Development/5.4.platform_bus.md#随笔--platform平台总线
-
+[5-5]:https://github.com/TongxinV/oneBook/blob/master/0.5.Linux-Driver%20Development/5.5.misc%E7%B1%BB%E8%AE%BE%E5%A4%87%E9%A9%B1.md#随笔--misc类设备驱动
