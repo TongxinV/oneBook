@@ -21,7 +21,7 @@ imp.file:``mkconfig脚本`` ``Makefile文件``
 
     <主Makefile分析>
         ├── 1. U_BOOT_VERSION
-        ├── 2. HOSTARCH和HOSTOS  主机架构（i386）和操作系统（linux）  得出来干嘛用？
+        ├── 2. HOSTARCH和HOSTOS  主机架构（i386）和操作系统（linux）  
         ├── 3. 静默编译
         ├── 4. 指定文件夹编译 BUILD_DIR = ...
         ├── 5. export OBJTREE SRCTREE TOPDIR MKCONFIG := $(SRCTREE)/mkconfig
@@ -40,11 +40,19 @@ imp.file:``mkconfig脚本`` ``Makefile文件``
     x210_sd_config:  unconfig
         @$(MKCONFIG)  $(@:_config) arm  s5pc11x x210 samsung s5pc110
         @echo  "TEXT_BASE = 0xc3e00000" > $(obj)board/samsung/x210/config.mk                     
-    调用mkconfig脚本，并传递6个参数，做了
-    (1)创建符号链接，用于将来在写代码过程中能自动索引具体平台的文件
-    (2)在include目录下创建config.mk文件并向里面写内容（其实就是把$2到$6的内容写入）让主Makefile去包含
-    (3)在include目录下创建config.h文件并向里面写内容(其实就一行#include <configs/$1.h>)让start.S去包含
-    
+    uboot编译前的配置.主要完成的内容是：
+    1.创建符号链接，用于将来在写代码过程中能自动索引具体平台的文件
+    2.在include目录下创建**config.mk**文件并向里面写内容（其实就是把`$2到$6`的内容写入）让主Makefile去包含
+    3.在include目录下创建**config.h**文件并向里面写内容(其实就一行`#include <configs/$1.h>)`用于Makefile作为生成autoconf.mk的依赖和让start.S去包含
+    4.直接创建**(obj)board/samsung/x210/config.mk**文件并向里面写内容（TEXT_BASE = 0xc3e00000）让根目录下的config.mk去包含
+        
+
+主要文件包含关系：
+
+图
+
+
+
  **Makefile详细分析**
 
 略（日后补充）
