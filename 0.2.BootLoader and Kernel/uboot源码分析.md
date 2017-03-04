@@ -1,6 +1,6 @@
 [TOC]
 
-#UBOOT
+## UBOOT
 ```
 获取uboot源码包，解压，`` 交叉编译工具事先要装好并检查Makefile的交叉编译工具的名称是否正确`` 
 配置``make 配置xxx_config`` 
@@ -8,54 +8,24 @@ make 编译得到uboot.bin
 ```
 
 
-###根目录下各个文件含义
+### 根目录下各个文件含义
 
 ...
 
 
-###uboot配置和编译过程
+### uboot配置和编译过程
 
-imp.file:``mkconfig脚本`` ``Makefile文件``
 
 整体结构：
 
-    <主Makefile分析>
-        ├── 1. U_BOOT_VERSION
-        ├── 2. HOSTARCH和HOSTOS  主机架构（i386）和操作系统（linux）  
-        ├── 3. 静默编译
-        ├── 4. 指定文件夹编译 BUILD_DIR = ...
-        ├── 5. export OBJTREE SRCTREE TOPDIR MKCONFIG := $(SRCTREE)/mkconfig
-        ├── 6. include $(obj)/config.mk  {make xxx_config配置时才会生成的文件}  
-        │      export  ARCH CPU BOARD VENDOR SOC                            
-        ├── 7. ARCH = ... CROSS_COMPILE = /usr/local/arm/arm-2009q3/bin/arm-none-linux-gnueabi-  
-        ├── 8. include $(TOPDIR)/config.mk                                                       
-        │        (1)编译工具定义 CC = $(CROSS_COMPILE)gcc         
-        │        (2)包含开发板配置文件
-        │        (3)指定连接脚本LDSCRIPT
-        │        (4)uboot 链接地址TEXT_BASE
-        │        (5)自动推导规则
-        └── 9. all:
-                ......
-    <配置过程分析>
-    x210_sd_config:  unconfig
-        @$(MKCONFIG)  $(@:_config) arm  s5pc11x x210 samsung s5pc110
-        @echo  "TEXT_BASE = 0xc3e00000" > $(obj)board/samsung/x210/config.mk                     
-    uboot编译前的配置.主要完成的内容是：
-    1.创建符号链接，用于将来在写代码过程中能自动索引具体平台的文件
-    2.在include目录下创建**config.mk**文件并向里面写内容（其实就是把`$2到$6`的内容写入）让主Makefile去包含
-    3.在include目录下创建**config.h**文件并向里面写内容(其实就一行`#include <configs/$1.h>)`用于Makefile作为生成autoconf.mk的依赖和让start.S去包含
-    4.直接创建**(obj)board/samsung/x210/config.mk**文件并向里面写内容（TEXT_BASE = 0xc3e00000）让根目录下的config.mk去包含
+![](https://github.com/TongxinV/oneBook/blob/master/0.2.BootLoader%20and%20Kernel/assets/%E5%85%B3%E7%B3%BB.png)
         
-
-主要文件包含关系：
-
-图
 
 
 
  **Makefile详细分析**
 
-略（日后补充）
+[《uboot主Makefile》](https://github.com/TongxinV/oneBook/issues/22)
 
 
 
