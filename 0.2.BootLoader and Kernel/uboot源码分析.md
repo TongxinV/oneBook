@@ -101,9 +101,11 @@ make 编译得到uboot.bin
 		
 **详细代码分析**
 
+```
 略（日后补充）
+```
 
-###几个重要事件
+### 几个重要事件
 
 ####--DDR初始化和重定位--
 
@@ -112,15 +114,6 @@ make 编译得到uboot.bin
 ####--uboot启动内核与传参--
 
 ...
-
-事先设置好`bootcmd`和`bootargs`
-```
-例：bootcmd 'movi read kernel 30008000; bootm 30008000'
-例：bootargs = 'xxx'
-```
-1.将内核镜像从启动介质加载到DDR中，执行`do_bootm`函数
-2.启动内核并同时传递参数给内核
-
 
 ####--uboot命令体系--
 
