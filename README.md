@@ -18,7 +18,7 @@
 
 **2.BootLoader and Kernel**
 
-* [`随笔--uboot源码分析`]
+* [`随笔--uboot源码分析`][2-1]
     
 **3.Programming in the UNIX**
 
@@ -69,6 +69,8 @@
 - [ ] `写文章的时候有时候需要总结有时候不需要总结，因为有时候需要对细节掌握要求高一点`
 
 
+
+[2-1]: https://github.com/TongxinV/oneBook/blob/master/0.2.BootLoader%20and%20Kernel/uboot%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90.md
 
 [3-0]:https://github.com/TongxinV/oneBook/tree/master/0.3.Programming%20in%20the%20UNIX
 
