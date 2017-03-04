@@ -18,8 +18,10 @@
 
 **2.BootLoader and Kernel**
 
-* [`随笔--uboot源码分析`][2-1]
-    
+* [`随笔--uboot 源码简要分析`][2-1]
+* [`随笔--kernel源码简要分析`]()
+
+
 **3.Programming in the UNIX**
 
 * [`UNIX环境高级编程·简单分类`][3-0]
