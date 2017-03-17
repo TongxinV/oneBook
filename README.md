@@ -25,6 +25,7 @@
 **3.Programming in the UNIX**
 
 * [`UNIX环境高级编程·简单分类`][3-0]
+* [`并发式io解决方案`][3-1]
 
 **4.Language C and C Plus**
 
@@ -75,6 +76,7 @@
 [2-1]: https://github.com/TongxinV/oneBook/blob/master/0.2.BootLoader%20and%20Kernel/uboot%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90.md
 
 [3-0]:https://github.com/TongxinV/oneBook/tree/master/0.3.Programming%20in%20the%20UNIX
+[3-1]:https://github.com/TongxinV/oneBook/blob/master/0.3.Programming%20in%20the%20UNIX/%E5%B9%B6%E5%8F%91%E5%BC%8FIO%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.md#并发式io解决方案
 
 [5-0]:https://github.com/TongxinV/oneBook/blob/master/0.5.Linux-Driver%20Development/0.0.%E5%AD%97%E7%AC%A6%E8%AE%BE%E5%A4%87%E5%9F%BA%E7%A1%80.md#随笔--linux字符设备驱动开发基础
 [5-1]:https://github.com/TongxinV/oneBook/blob/master/0.5.Linux-Driver%20Development/5.1.%E9%A9%B1%E5%8A%A8%E6%A1%86%E6%9E%B6%E5%85%A5%E9%97%A8.md#随笔--linux驱动框架入门之led
