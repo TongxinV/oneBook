@@ -3,9 +3,9 @@
 
 [TOC]
 
-* [非阻塞式IO(有本质的缺陷)](#非阻塞式IO)
-* [IO多路复用(select/poll)](#IO多路复用(select/poll))
-* [异步IO(signal/sigaction)](#异步IO(signal/sigaction))
+* [非阻塞式IO(有本质的缺陷)](#非阻塞式)
+* [IO多路复用(select/poll)](#IO多路复用)
+* [异步IO(signal/sigaction)](#异步)
 
 ### 非阻塞式IO
 
