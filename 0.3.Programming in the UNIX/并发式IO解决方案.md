@@ -7,14 +7,14 @@
 * IO多路复用
 * 异步IO
 
-###非阻塞式IO
+### 非阻塞式IO
 
 > 有本质缺陷，简单介绍如何利用fcntl设置flag，可略过
 
 程序示例：[非阻塞式IO](https://github.com/TongxinV/oneBook/blob/master/0.3.Programming%20in%20the%20UNIX/assets/001/%E9%9D%9E%E9%98%BB%E5%A1%9E%E5%BC%8F%E5%AE%9E%E7%8E%B0.png)
 
 
-###IO多路复用(select/poll)
+### IO多路复用(select/poll)
 
 > 外部阻塞式(select\poll函数)，内部非阻塞式自动轮询多路阻塞式IO
 
@@ -33,7 +33,7 @@
 
 
 
-###异步IO(signal/sigaction)
+### 异步IO(signal/sigaction)
 
 
 1. 何为异步IO
