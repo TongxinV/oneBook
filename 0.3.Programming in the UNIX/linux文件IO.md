@@ -4,6 +4,23 @@ linux文件I/O
 
 [TOC]
 
+* `linux文件I/O`
+    * `文件I/O`
+    * `Linux文件操作过程`
+    * `打开关闭文件open/close`
+        * `关于open函数flags`
+    * `读写文件内容read/write`
+        * `文件读写的一些细节`
+    * `linux系统如何管理文件`
+    * `文件共享的实现方式(3)`
+    * `文件属性`
+* `linux各种文件类型`
+    * `常用文件属性获取`
+    * `文件权限管理`
+    * `读取目录文件`
+
+
+
 ### 文件I/O
 
 > IO就是input/output，文件IO的意思就是读写文件。常用文件IO接口：open、close、write、read、lseek
