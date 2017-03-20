@@ -79,8 +79,8 @@
 
 [3-0]:https://github.com/TongxinV/oneBook/tree/master/0.3.Programming%20in%20the%20UNIX
 [3-1]:https://github.com/TongxinV/oneBook/blob/master/0.3.Programming%20in%20the%20UNIX/%E5%B9%B6%E5%8F%91%E5%BC%8FIO%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.md#并发式io解决方案
-[3-2]:https://github.com/TongxinV/oneBook/blob/master/0.3.Programming%20in%20the%20UNIX/linux%E8%BF%9B%E7%A8%8B%E6%A6%82%E8%BF%B0.md#linux进程相关
-[3-3]:https://github.com/TongxinV/oneBook/blob/master/0.3.Programming%20in%20the%20UNIX/linux%E7%BA%BF%E7%A8%8B%E6%8E%A7%E5%88%B6.md#linux线程控制
+[3-2]:https://github.com/TongxinV/oneBook/blob/master/0.3.Programming%20in%20the%20UNIX/linux%E8%BF%9B%E7%A8%8B%E6%A6%82%E8%BF%B0.md
+[3-3]:https://github.com/TongxinV/oneBook/blob/master/0.3.Programming%20in%20the%20UNIX/linux%E7%BA%BF%E7%A8%8B%E6%8E%A7%E5%88%B6.md
 
 
 
