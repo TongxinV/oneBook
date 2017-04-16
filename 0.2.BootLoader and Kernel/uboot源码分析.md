@@ -28,7 +28,7 @@ make 编译得到uboot.bin
 
 
 
-###uboot源码分析
+### uboot源码分析
 
 > flags: JiuDing移植的uboot
 
@@ -106,20 +106,20 @@ make 编译得到uboot.bin
 
 ### 几个重要事件
 
-####--DDR初始化和重定位--
+#### --DDR初始化和重定位--
 
 ...
 
-####--uboot启动内核与传参--
+#### --uboot启动内核与传参--
 
 ...
 
-####--uboot命令体系--
+#### --uboot命令体系--
 
 ...
 
 
-####--uboot环境变量--
+#### --uboot环境变量--
 
 ...
 
