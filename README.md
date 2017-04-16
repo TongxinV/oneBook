@@ -61,7 +61,11 @@
 
 ## 博客/一些零散问题/心情
 
-
+* [`ubuntu 14.04 samba安装`](https://github.com/TongxinV/oneBook/issues/24)
+* [`uboot主Makefile`](https://github.com/TongxinV/oneBook/issues/22)
+* [`uboot配置过程(mkconfig脚本+其他)`](https://github.com/TongxinV/oneBook/issues/21)
+* [`uboot根目录下的config.mk`](https://github.com/TongxinV/oneBook/issues/20)
+* [`uboot链接脚本（为什么需要链接脚本）`](https://github.com/TongxinV/oneBook/issues/19)
 * [`内核链表实现分析与使用（双向环形链表）`](https://github.com/TongxinV/oneBook/issues/18)
 * [`从C语言的角度出发理解C++的封装继承和多态`](https://github.com/TongxinV/oneBook/issues/16)
 * [`谈论attribute驱动实现方式(及device_create与设备节点的关系)`](https://github.com/TongxinV/oneBook/issues/15)
