@@ -21,8 +21,7 @@ make 编译得到uboot.bin
         
 
 
-
- **配置过程和Makefile详细分析**
+配置过程和Makefile详细分析：
 
 [《uboot配置过程(mkconfig脚本+其他)》](https://github.com/TongxinV/oneBook/issues/21)<br>
 [《uboot根目录下的config.mk》](https://github.com/TongxinV/oneBook/issues/20)<br>
