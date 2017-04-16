@@ -62,18 +62,21 @@
 ## 博客/一些零散问题/心情
 
 
-* [`__register_chrdev_region分析(简单字符设备驱动在内核的工作原理)`](https://github.com/TongxinV/oneBook/issues/7)
-* [`Linux内核静态映射表建立过程分析`](https://github.com/TongxinV/oneBook/issues/5)
-* [`动态映射之结构体方式操作寄存器`](https://github.com/TongxinV/oneBook/issues/6)
-* [`内核提供读写寄存器接口实现可移植性`](https://github.com/TongxinV/oneBook/issues/8)
-* [`linux内核段属性机制(以subsys_initcall和module_init为例)`](https://github.com/TongxinV/oneBook/issues/9)
-* [`将写好的驱动添加到内核中`](https://github.com/TongxinV/oneBook/issues/10)
-* [`系统启动时在bus系统中注册platform总线`](https://github.com/TongxinV/oneBook/issues/11)
-* [`正确使用指针(指针作为输出型参数)与结构体指针作为函数参数`](https://github.com/TongxinV/oneBook/issues/13)
-* [`移植库需要注意事项(与移植库生成的文件如何使用)`](https://github.com/TongxinV/oneBook/issues/14)
-* [`谈论attribute驱动实现方式(及device_create与设备节点的关系)`](https://github.com/TongxinV/oneBook/issues/15)
-* [`从C语言的角度出发理解C++的封装继承和多态`](https://github.com/TongxinV/oneBook/issues/16)
 * [`内核链表实现分析与使用（双向环形链表）`](https://github.com/TongxinV/oneBook/issues/18)
+* [`从C语言的角度出发理解C++的封装继承和多态`](https://github.com/TongxinV/oneBook/issues/16)
+* [`谈论attribute驱动实现方式(及device_create与设备节点的关系)`](https://github.com/TongxinV/oneBook/issues/15)
+* [`移植库需要注意事项(与移植库生成的文件如何使用)`](https://github.com/TongxinV/oneBook/issues/14)
+* [`正确使用指针(指针作为输出型参数)与结构体指针作为函数参数`](https://github.com/TongxinV/oneBook/issues/13)
+* [`系统启动时在bus系统中注册platform总线`](https://github.com/TongxinV/oneBook/issues/11)
+* [`将写好的驱动添加到内核中`](https://github.com/TongxinV/oneBook/issues/10)
+* [`linux内核段属性机制(以subsys_initcall和module_init为例)`](https://github.com/TongxinV/oneBook/issues/9)
+* [`内核提供读写寄存器接口实现可移植性`](https://github.com/TongxinV/oneBook/issues/8)
+* [`__register_chrdev_region分析(简单字符设备驱动在内核的工作原理)`](https://github.com/TongxinV/oneBook/issues/7)
+* [`动态映射之结构体方式操作寄存器`](https://github.com/TongxinV/oneBook/issues/6)
+* [`Linux内核静态映射表建立过程分析`](https://github.com/TongxinV/oneBook/issues/5)
+
+
+
 
 
 > 备忘录
