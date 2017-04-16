@@ -59,10 +59,8 @@
  * [`随笔--misc类设备驱动`][5-5]
  
 
-> 博客
+## 博客/一些零散问题/心情
 
-```s
-```
 
 * [`__register_chrdev_region分析(简单字符设备驱动在内核的工作原理)`](https://github.com/TongxinV/oneBook/issues/7)
 * [`Linux内核静态映射表建立过程分析`](https://github.com/TongxinV/oneBook/issues/5)
