@@ -15,7 +15,7 @@
     <img src="https://img.shields.io/github/issues/TongxinV/oneBook.svg" alt="GitHub issues">
   </a>
   
-  <a href="">
+  <a href="mailto:liyanbin0027@163.com">
     <img src="https://img.shields.io/badge/%20liyanbin0027%40163.com-Chat-blue.svg" alt="YouXiang">
   </a>
   
