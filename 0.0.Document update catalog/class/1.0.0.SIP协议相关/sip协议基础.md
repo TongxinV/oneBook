@@ -191,7 +191,7 @@ SIP是一个信令协议，它对应于传统电话网络中的呼叫信令协�
 
 | 消息头域 | 描述| 
 |:---|:---|
-| Via | 用于记录请求经由的路径<br>例：<br>Via: SIP/2.0/UDP 192.168.78.165:44794;branch=z9hG4bK-d87543-0625ef7c430eb355-1--d87543-;rport<br>Via:...<br>...<br>Via头域是被服务器插入request中，用来检查路由环的，并且可以使response根据via找到返回的路。**它不会对未来的request 或者是response造成影响** |
+| Via | 用于记录请求经由的路径<br>例：<br>Via: SIP/2.0/UDP 192.168.78.165:44794;branch=z9hG4bK-d87543-0625ef7c430eb355-1--d87543-;rport<br>Via:...<br>...<br>Via头域是被服务器插入request中，用来检查路由环的，并且可以使response根据via找到返回的路。**它不会对未来的request 或者是response造成影响**(也就是只在第一次response中被用一次) |
 | Call-ID | 用于唯一标识一个特定的会话或注册消息<br>应具有随机性，保证全球唯一 | Call-ID: NGNlM...SDF...DIyYjQ |
 | From | 源端SIP URL，标识请求发送方；UAC本地标签<br>例：<br>From: `"8888"<sip:8888@192.168.78.141>`;tag=b40d6a51<br>如果一个SIP消息中没有Contact或者Record-Route头域，那么callee就会根据From头域作为后续的Request消息头中的相关头域的内容，比如：如果Alice打一个电话给Bob，From头域的内容是 From:Alice<sip:alice@example.org>。那么Bob打给Alice时就会使用 sip:alice@example.org作为To头域和Request-URI头域的内容<br>**总的来说，如果有Route，request就应该根据Route发送，如果没有就根据Contact头域发送，如果连Contact都没有，就根据From头域发送** |
 | To   | 目标SIP URL，标识请求接受方；UAS本地标签<br>例：<br>INVITE 中的To: `"1212"<sip:1212@192.168.78.141>`;<br>180响应中的To: `"1212"<sip:1212@192.168.78.141>`;tag=e9f70d91(由uas添加） |
