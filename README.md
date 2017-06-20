@@ -64,7 +64,7 @@
 
 
 
-## 博客/一些零散问题/心情
+## 博客/零散问题/心情
 
 * [`ubuntu 14.04 samba安装`](https://github.com/TongxinV/oneBook/issues/24)
 * [`uboot主Makefile`](https://github.com/TongxinV/oneBook/issues/22)
