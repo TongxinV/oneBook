@@ -66,6 +66,7 @@
 
 ## 博客/零散问题/心情
 
+* [`Ubuntu1604下使用virtualenv工具搭建python2，3开发环境 `](https://github.com/TongxinV/oneBook/issues/28)
 * [`ubuntu 14.04 samba安装`](https://github.com/TongxinV/oneBook/issues/24)
 * [`uboot主Makefile`](https://github.com/TongxinV/oneBook/issues/22)
 * [`uboot配置过程(mkconfig脚本+其他)`](https://github.com/TongxinV/oneBook/issues/21)
