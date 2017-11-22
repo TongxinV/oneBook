@@ -97,7 +97,7 @@
 
 - [ ] `完成文章``《Kconfig Makefile .config三者之间的关系（在内核中添加或去除某个驱动）》`
 
-> 备忘录
+> **备忘录（新）**
 - [ ] 大型工程的makefile/子模块的Makefile(driver、device)的编写记录
 - [ ] 编译时的链接路径的运行时的链接路径的区别
 - [ ] libxml2、xpath的学习记录
