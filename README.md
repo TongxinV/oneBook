@@ -136,6 +136,7 @@
 - [ ] rabbitmq-c rpc模式的编程记录
 - [ ] 查看某一进程内存、CPU使用情况，top -c -p $(pidof 进程名)；VIRT是进程占用内存；还有就是cat /proc/进程PID/status。那么问题来了-->怎么做内存优化？ 
 - [ ] 记录我是怎么找到amqp_simple_wait_frame_on_channel这个头文件没有的函数来使用的
+- [ ] 【rabbitmq】多个队列==多个channel==多个conn
 <br>
 
 ---- **路虽远，不行不至**
