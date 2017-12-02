@@ -139,7 +139,7 @@
 - [ ] 【rabbitmq】多个队列==多个channel==多个conn
 - [ ] 用`void *`作为函数形参，留给用户定义的函数用户再去自己根据自己的数据类型去函数内部做强制转换；比如之前的函数类型是这样的`typedef UCRET (*request_ops_func)(cJSON *root,UCCHAR *id, cJSON *buffer, UCINT size);`用户要这样写`UCRET __doRedirectRespone(cJSON *root,UCCHAR *id, cJSON *buffer, UCINT size)`；后面改成函数类型定义`typedef UCRET (*request_ops_func)(void *root,UCCHAR *id, void *buffer, UCINT size);`用户可以`UCRET __doRedirectRespone(void *root,UCCHAR *id, void *buffer, UCINT size)`加上`__doRedirectRespone(...){...cJSON *root = (cJSON *)content;...}`
 - [ ] nginx、apache
-- [ ] MCU状态机实现框架
+- [ ] MCU状态机实现框架:`participantManage.c/__PmTaskEntry/__PmProcess/__PmEventHandler/pm_fsm_run`
 
 
 <br>
